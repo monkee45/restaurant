@@ -1,0 +1,30 @@
+{
+  "parser": "@babel/eslint-parser", // For Babel
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "plugins": [
+    "css-modules"
+  ],
+  "extends": [
+    "plugin:css-modules/recommended"
+  ],
+  "rules": {
+    "css-modules/no-unused-class": [2, { "markAsUsed": ["container"] }],
+    "css-modules/no-undef-class": [2]
+  },
+  "settings": {
+    "css-modules": {
+      "basePath": "app/scripts..."
+    }
+  }
+}

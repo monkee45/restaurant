@@ -1,16 +1,15 @@
-import { useState } from "react"
 import Menu from "./Menu"
 import Categories from './Categories'
 import items from "./data"
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   return (
     <main>
-      <section className="menu section">
-        <div className="title">
+      <section className={"${styles.menu} ${styles.section}"} >
+        <div className={styles.title}>
           <h2>our menu</h2>
-          <div className="underline"></div>
+          <div className={styles.underline}></div>
         </div>
         <Categories />
         <Menu items={items}/>
